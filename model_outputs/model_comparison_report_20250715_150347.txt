@@ -1,0 +1,138 @@
+
+Hospital Readmission Prediction - Model Comparison Report
+========================================================
+Generated: 2025-07-15 15:04:11
+
+TARGET ACCURACY: 85%
+
+MODEL SPECIFICATIONS:
+- XGBoost: n_estimators=500, max_depth=8, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8, reg_alpha=0.1, reg_lambda=1.0
+- Random Forest: n_estimators=300, max_depth=15, min_samples_split=5, min_samples_leaf=2, max_features='sqrt'
+- Logistic Regression: C=0.1, penalty='l2', solver='liblinear', max_iter=1000
+- Neural Network: hidden_layer_sizes=(200, 100, 50), activation='relu', solver='adam', alpha=0.001
+
+DATA SPLIT: 70% train, 15% validation, 15% test
+CROSS-VALIDATION: 5-fold stratified
+
+TEST SET PERFORMANCE:
+==================
+
+XGBoost:
+  Test Accuracy:  0.8870 ✓ MEETS TARGET
+  Test Precision: 0.8998
+  Test Recall:    0.8870
+  Test F1-Score:  0.8414
+  Test ROC-AUC:   0.6634
+
+Random Forest:
+  Test Accuracy:  0.8783 ✓ MEETS TARGET
+  Test Precision: 0.7713
+  Test Recall:    0.8783
+  Test F1-Score:  0.8213
+  Test ROC-AUC:   0.6259
+
+Logistic Regression:
+  Test Accuracy:  0.8783 ✓ MEETS TARGET
+  Test Precision: 0.7713
+  Test Recall:    0.8783
+  Test F1-Score:  0.8213
+  Test ROC-AUC:   0.6655
+
+Neural Network:
+  Test Accuracy:  0.8696 ✓ MEETS TARGET
+  Test Precision: 0.8311
+  Test Recall:    0.8696
+  Test F1-Score:  0.8415
+  Test ROC-AUC:   0.7765
+
+
+CROSS-VALIDATION RESULTS:
+======================
+
+Random Forest:
+  CV Accuracy:  0.8791 (+/- 0.0061)
+  CV Precision: 0.7728 (+/- 0.0107)
+  CV Recall:    0.8791 (+/- 0.0061)
+  CV F1-Score:  0.8226 (+/- 0.0087)
+  CV ROC-AUC:   0.4882 (+/- 0.1017)
+
+Logistic Regression:
+  CV Accuracy:  0.8791 (+/- 0.0061)
+  CV Precision: 0.7728 (+/- 0.0107)
+  CV Recall:    0.8791 (+/- 0.0061)
+  CV F1-Score:  0.8226 (+/- 0.0087)
+  CV ROC-AUC:   0.4783 (+/- 0.1048)
+
+XGBoost:
+  CV Accuracy:  0.8765 (+/- 0.0098)
+  CV Precision: 0.7726 (+/- 0.0108)
+  CV Recall:    0.8765 (+/- 0.0098)
+  CV F1-Score:  0.8212 (+/- 0.0099)
+  CV ROC-AUC:   0.4732 (+/- 0.1252)
+
+Neural Network:
+  CV Accuracy:  0.8607 (+/- 0.0194)
+  CV Precision: 0.7779 (+/- 0.0246)
+  CV Recall:    0.8607 (+/- 0.0194)
+  CV F1-Score:  0.8153 (+/- 0.0123)
+  CV ROC-AUC:   0.4324 (+/- 0.0876)
+
+
+FEATURE IMPORTANCE (Top 10):
+=========================
+
+XGBoost:
+         feature  importance
+     age__10_20_    0.028462
+weight__100_125_    0.025104
+     age__60_70_    0.022941
+ diabetesmed_yes    0.022735
+   payer_code_mc    0.022125
+    glipizide_up    0.020971
+  race_caucasian    0.020631
+     age__70_80_    0.018908
+       change_no    0.018780
+      insulin_no    0.018414
+
+
+Random Forest:
+                 feature  importance
+  lab_procedures_per_day    0.057431
+         num_medications    0.054822
+      num_lab_procedures    0.053088
+      total_prior_visits    0.048032
+discharge_disposition_id    0.042950
+        time_in_hospital    0.042382
+        number_diagnoses    0.040434
+        number_inpatient    0.039573
+     admission_source_id    0.039337
+          num_procedures    0.036654
+
+
+Logistic Regression:
+         feature  importance
+weight__100_125_    0.311716
+     age__80_90_    0.245946
+   diag_3_250.02    0.245570
+      race_other    0.226716
+   payer_code_md    0.198301
+     age__70_80_    0.196753
+ diagnosis_count    0.196352
+ on_diabetes_med    0.195924
+ diabetesmed_yes    0.195924
+glipizide_steady    0.172774
+
+
+RECOMMENDATIONS:
+===============
+1. Best performing model: XGBoost (Test Accuracy: 0.8870)
+2. Most stable model (CV): Random Forest (CV Accuracy: 0.8791)
+3. Models meeting 85% target: 4 out of 4
+
+FILES GENERATED:
+===============
+- Trained models: model_outputs/*_20250715_150347.pkl
+- Performance metrics: model_outputs/performance_metrics_20250715_150347.csv
+- CV results: model_outputs/cv_results_20250715_150347.csv
+- Feature importance: model_outputs/feature_importance_*_20250715_150347.csv
+- Complete results: model_outputs/complete_results_20250715_150347.json
