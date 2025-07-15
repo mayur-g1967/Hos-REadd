@@ -1,0 +1,123 @@
+{
+  "performance_metrics": {
+    "XGBoost": {
+      "train_accuracy": 1.0,
+      "val_accuracy": 0.8859649122807017,
+      "test_accuracy": 0.8869565217391304,
+      "train_precision": 1.0,
+      "val_precision": 0.8990839931687626,
+      "test_precision": 0.8998474446987033,
+      "train_recall": 1.0,
+      "val_recall": 0.8859649122807017,
+      "test_recall": 0.8869565217391304,
+      "train_f1": 1.0,
+      "val_f1": 0.8400296515937731,
+      "test_f1": 0.8413886080215704,
+      "train_roc_auc": 1.0,
+      "val_roc_auc": 0.42928571428571427,
+      "test_roc_auc": 0.6633663366336633
+    },
+    "Random Forest": {
+      "train_accuracy": 0.9135338345864662,
+      "val_accuracy": 0.8771929824561403,
+      "test_accuracy": 0.8782608695652174,
+      "train_precision": 0.9212720517246423,
+      "val_precision": 0.7694675284702985,
+      "test_precision": 0.7713421550094518,
+      "train_recall": 0.9135338345864662,
+      "val_recall": 0.8771929824561403,
+      "test_recall": 0.8782608695652174,
+      "train_f1": 0.8913063046070794,
+      "val_f1": 0.8198065256599443,
+      "test_f1": 0.8213365539452496,
+      "train_roc_auc": 1.0,
+      "val_roc_auc": 0.38857142857142857,
+      "test_roc_auc": 0.6258840169731259
+    },
+    "Logistic Regression": {
+      "train_accuracy": 0.8796992481203008,
+      "val_accuracy": 0.8771929824561403,
+      "test_accuracy": 0.8782608695652174,
+      "train_precision": 0.7738707671434225,
+      "val_precision": 0.7694675284702985,
+      "test_precision": 0.7713421550094518,
+      "train_recall": 0.8796992481203008,
+      "val_recall": 0.8771929824561403,
+      "test_recall": 0.8782608695652174,
+      "train_f1": 0.8233984962406015,
+      "val_f1": 0.8198065256599443,
+      "test_f1": 0.8213365539452496,
+      "train_roc_auc": 0.7250600961538461,
+      "val_roc_auc": 0.4878571428571428,
+      "test_roc_auc": 0.6654879773691654
+    },
+    "Neural Network": {
+      "train_accuracy": 1.0,
+      "val_accuracy": 0.8508771929824561,
+      "test_accuracy": 0.8695652173913043,
+      "train_precision": 1.0,
+      "val_precision": 0.7665560297139243,
+      "test_precision": 0.8311462450592885,
+      "train_recall": 1.0,
+      "val_recall": 0.8508771929824561,
+      "test_recall": 0.8695652173913043,
+      "train_f1": 1.0,
+      "val_f1": 0.8065186663340815,
+      "test_f1": 0.8414545533419372,
+      "train_roc_auc": 1.0,
+      "val_roc_auc": 0.44,
+      "test_roc_auc": 0.7765205091937766
+    }
+  },
+  "cv_results": {
+    "XGBoost": {
+      "accuracy_mean": 0.8764791881664946,
+      "accuracy_std": 0.004890299287163853,
+      "precision_mean": 0.7725618030807319,
+      "precision_std": 0.0054245154110237085,
+      "recall_mean": 0.8764791881664946,
+      "recall_std": 0.004890299287163853,
+      "f1_mean": 0.8212426584204499,
+      "f1_std": 0.004959003868415144,
+      "roc_auc_mean": 0.4731919481867801,
+      "roc_auc_std": 0.06261468888316722
+    },
+    "Random Forest": {
+      "accuracy_mean": 0.8791107671138632,
+      "accuracy_std": 0.0030339114168866296,
+      "precision_mean": 0.7728449454740103,
+      "precision_std": 0.005330327294916166,
+      "recall_mean": 0.8791107671138632,
+      "recall_std": 0.0030339114168866296,
+      "f1_mean": 0.8225575234417641,
+      "f1_std": 0.004348208090072853,
+      "roc_auc_mean": 0.4881643753269006,
+      "roc_auc_std": 0.050855158021401656
+    },
+    "Logistic Regression": {
+      "accuracy_mean": 0.8791107671138632,
+      "accuracy_std": 0.0030339114168866296,
+      "precision_mean": 0.7728449454740103,
+      "precision_std": 0.005330327294916166,
+      "recall_mean": 0.8791107671138632,
+      "recall_std": 0.0030339114168866296,
+      "f1_mean": 0.8225575234417641,
+      "f1_std": 0.004348208090072853,
+      "roc_auc_mean": 0.4782507131930376,
+      "roc_auc_std": 0.052412295200065656
+    },
+    "Neural Network": {
+      "accuracy_mean": 0.8607069143446852,
+      "accuracy_std": 0.009700310686650183,
+      "precision_mean": 0.7779392191777975,
+      "precision_std": 0.012320305548912508,
+      "recall_mean": 0.8607069143446852,
+      "recall_std": 0.009700310686650183,
+      "f1_mean": 0.8153406233953421,
+      "f1_std": 0.0061444678945547435,
+      "roc_auc_mean": 0.4323541900049942,
+      "roc_auc_std": 0.04381879276770568
+    }
+  },
+  "timestamp": "20250715_150347"
+}
